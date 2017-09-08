@@ -49,3 +49,24 @@ function main() {
     console.log(answer);
 
 }
+
+// PROMISE AND CALL BACKS EXAMPLE EXPLAINED:
+
+// the promise is to clean the room... the resolve/reject passthrough function arguments are the callback...
+let promiseToCleanTheRoom = new Promise(function(resolve, reject){
+  // cleaning the room
+  let isClean = true;
+
+  if (isClean){
+    resolve('Clean');
+  } else {
+    reject();
+  }
+});
+
+// Call backs are pretty self explanatory === promises can be used anywhere and everywhere.
+promiseToCleanTheRoom.then(funciton (fromResolve){
+  console.log('room is clean ' + fromResolve);
+}).catch(function(fromReject){
+  console.log('the room is ' + fromReject);
+});
