@@ -71,3 +71,5 @@ promiseToCleanTheRoom.then(funciton (fromResolve){
 }).catch(function(fromReject){
   console.log('the room is ' + fromReject);
 });
+
+// JUST GOING TO KEEP ON PUTTING IN SOLUTIONS HERE:
