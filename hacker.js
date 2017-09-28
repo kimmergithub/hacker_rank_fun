@@ -73,3 +73,31 @@ promiseToCleanTheRoom.then(funciton (fromResolve){
 });
 
 // JUST GOING TO KEEP ON PUTTING IN SOLUTIONS HERE:
+
+function main() {
+    var n = parseInt(readLine());
+    arr = readLine().split(' ');
+    arr = arr.map(Number);
+
+    let neg = 0;
+    let pos = 0;
+    let zero = 0;
+
+   arr.forEach(ele => {
+       if (ele < 0) {
+           neg++
+       } else if (ele > 0){
+           pos++
+       } else {
+           zero++
+       }
+   })
+    neg = (neg / n)
+    pos = (pos / n)
+    zero = (zero / n )
+
+    console.log( pos.toFixed(6) )
+    console.log( neg.toFixed(6) )
+    console.log( zero.toFixed(6) )
+
+}
