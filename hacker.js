@@ -65,6 +65,7 @@ let promiseToCleanTheRoom = new Promise(function(resolve, reject){
 });
 
 // Call backs are pretty self explanatory === promises can be used anywhere and everywhere.
+// Promises keep you code clean because you can individually define them and you don't have run callback upon callback upon callback...
 promiseToCleanTheRoom.then(funciton (fromResolve){
   console.log('room is clean ' + fromResolve);
 }).catch(function(fromReject){
