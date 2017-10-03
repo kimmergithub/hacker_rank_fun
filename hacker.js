@@ -101,3 +101,67 @@ function main() {
     console.log( zero.toFixed(6) )
 
 }
+
+
+// the stairs
+
+for (let i = 0; i < (n * n); i++){
+        if ( (counter === n) && (hash.length !== n) ){
+            hash += '#';
+        } else if ( (counter === n) && (hash.length === n) ){
+            console.log(hash);
+            counter--
+        } else if ( (counter < n) && (counter !== 0) ){
+            let split = hash.split('');
+            split[n - (counter + 1)] = ' ';
+            hash = split.join('');
+            console.log(hash);
+            counter--
+        }
+    }
+
+
+  // REAL ANSWER THAT WORKS
+  function main() {
+    var n = parseInt(readLine());
+    let counter = n;
+    let hash = ''
+    for (let i = 0; i < (n * n); i++){
+        if ( (counter === n) && (hash.length !== n) ){
+            hash += ' ';
+        } else if ( (counter === n) && (hash.length === n) ){
+            let split = hash.split('');
+            split[split.length - 1] = '#'
+            hash = split.join('');
+            console.log(hash);
+            counter--
+        } else if ( (counter < n) && (counter !== 0) ){
+           split = hash.split('');
+           split[counter - 1] = '#'
+           hash = split.join('');
+           console.log(hash);
+           counter--
+        }
+    }
+}
+
+// reversing a string / array thing
+function main() {
+    var n = parseInt(readLine());
+    arr = readLine().split(' ');
+    arr = arr.map(Number);
+    answer = arr.reverse().join(' ');
+    console.log(answer);
+}
+
+//  === running it through a reverse forloop;
+function main() {
+    var n = parseInt(readLine());
+    arr = readLine().split(' ');
+    arr = arr.map(Number);
+    let answer = [];
+   for (let i = arr.length; i > 0; i--){
+       answer.push(arr[i - 1]);
+   }
+    console.log(answer.join(' '))
+}
