@@ -165,3 +165,36 @@ function main() {
    }
     console.log(answer.join(' '))
 }
+
+
+// Hourglass javascript solution === I don't understand this yet
+
+function main() {
+   var arr = [], count = -63;
+
+    // This takes all the inputs and puts them into an array so that you can manipulate them
+    for(let arr_i = 0; arr_i < 6; arr_i++){
+
+       arr[arr_i] = readLine().split(' ');
+
+       arr[arr_i] = arr[arr_i].map(Number);
+
+       console.log(arr[arr_i])
+    }
+   for( i = 0 ; i < 4 ; i ++)
+        {
+        for( j = 0 ; j < 4 ; j ++)
+            {
+            var t;
+            t = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+            if( t > count )
+                {
+                count = t ;
+            }
+        }
+    }
+
+    console.log()
+
+    console.log(count);
+}
