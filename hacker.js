@@ -170,6 +170,8 @@ function main() {
 // Hourglass javascript solution === I don't understand this yet
 
 function main() {
+
+  // this first block is the given information
    var arr = [], count = -63;
 
     // This takes all the inputs and puts them into an array so that you can manipulate them
@@ -181,16 +183,26 @@ function main() {
 
        console.log(arr[arr_i])
     }
+
+    // this is very specific for the size of the matrix that you are going to be going through and summing up the hourglasses === this is NOT an one size fits all answer.
    for( i = 0 ; i < 4 ; i ++)
         {
         for( j = 0 ; j < 4 ; j ++)
             {
             var t;
+
+            console.log(arr[i])
+
+            // this is the hourglass shape that corresponds to the matrix so you can cut out an do the addition on the item...
             t = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+
+
             if( t > count )
                 {
                 count = t ;
             }
+            console.log('t = ' + t);
+            console.log('count = ' + count)
         }
     }
 
