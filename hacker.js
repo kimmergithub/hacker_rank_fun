@@ -191,7 +191,6 @@ function main() {
             {
             var t;
 
-            console.log(arr[i])
 
             // this is the hourglass shape that corresponds to the matrix so you can cut out an do the addition on the item...
             t = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
@@ -201,8 +200,6 @@ function main() {
                 {
                 count = t ;
             }
-            console.log('t = ' + t);
-            console.log('count = ' + count)
         }
     }
 
@@ -210,3 +207,29 @@ function main() {
 
     console.log(count);
 }
+
+// MY SOLUTION TO THIS PROBLEM
+
+function main() {
+    var arr = [];
+    for(arr_i = 0; arr_i < 6; arr_i++){
+       arr[arr_i] = readLine().split(' ');
+       arr[arr_i] = arr[arr_i].map(Number);
+    }
+
+    // going to use a forloop that goes throught the legnth of 4 because this is the limits of the hoursglass top to bottom for the matrix size.
+    let answer = -100;
+
+    for (let i = 0; i < 4; i++){
+        for (let j = 0; j < 4; j++){
+            let pH = 0;
+            // need to define the shape of the hourglass?
+           pH = arr[i][j] + arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+           if (pH > answer){
+           answer = pH;
+           };
+
+        };
+    };
+    console.log(answer);
+};
