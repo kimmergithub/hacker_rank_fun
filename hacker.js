@@ -233,3 +233,16 @@ function main() {
     };
     console.log(answer);
 };
+
+// POSSIBLE LEFT ROTATION SOLUTION === SEEMS TO TIME OUT ON A FEW
+
+let answer;
+function leftRotation(a, d) {
+    // Complete this function
+
+    for (let i = 0; i < d; i++){
+      a.push( a[0] )
+       a.shift();
+        answer = a.join(' ');
+    }
+}
